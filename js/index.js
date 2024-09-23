@@ -43,7 +43,8 @@ document.getElementById('donate-noakhali').addEventListener('click', function(ev
     
 
     if(noakhaliDonationInput > accountBalancee || /[a-zA-Z]/.test(noakhaliDonationInput)){
-        document.getElementById('noakhali-donate-error').classList.remove ('hidden');
+        alert("Invalid Donation Amount");
+        document.getElementById('donate-noakhali-flood').value = '';
     }
         
     else{
@@ -61,6 +62,8 @@ document.getElementById('donate-noakhali').addEventListener('click', function(ev
             const remainingAccountBalance = accountBalancee - noakhaliDonationInput;
             document.getElementById('noakhali-donation').innerText = totalNoakhaliDonationBalance;
             document.getElementById('account-balance').innerText = remainingAccountBalance;
+
+            document.getElementById('donate-noakhali-flood').value = '';
     
     
             const noakhaliDonationHistory = document.createElement('div');
@@ -99,7 +102,9 @@ document.getElementById('donate-noakhali').addEventListener('click', function(ev
         }
     
         else{
-            document.getElementById('noakhali-donate-error').classList.remove ('hidden');
+            alert("Invalid Donation Amount");
+            document.getElementById('donate-noakhali-flood').value = '';
+           
         }
     }
 
@@ -113,7 +118,8 @@ document.getElementById('donate-feni').addEventListener('click', function(event)
     const accountBalancee = accountBalance('account-balance');
 
     if(feniDonationInput > accountBalancee || /[a-zA-Z]/.test(feniDonationInput)){
-        document.getElementById('feni-donate-error').classList.remove('hidden');
+        alert("Invalid Donation Amount");
+        document.getElementById('donate-feni-flood').value = '';
     }
 
     else{
@@ -134,6 +140,8 @@ document.getElementById('donate-feni').addEventListener('click', function(event)
         
             document.getElementById('feni-donation').innerText = totalFeniDonationBalance;
             document.getElementById('account-balance').innerText = remainingAccountBalance;
+
+            document.getElementById('donate-feni-flood').value = '';
     
     
     
@@ -174,7 +182,8 @@ document.getElementById('donate-feni').addEventListener('click', function(event)
         }
     
         else{
-            document.getElementById('feni-donate-error').classList.remove('hidden');
+            alert("Invalid Donation Amount");
+            document.getElementById('donate-feni-flood').value = '';
     
         };
     
@@ -198,7 +207,10 @@ document.getElementById('donate-quota-movement-aid').addEventListener('click', f
     
     
     if(aidDonationInput > accountBalancee || /[a-zA-Z]/.test(aidDonationInput)){
-        document.getElementById('donate-aid-error').classList.remove('hidden');
+        // document.getElementById('donate-aid-error').classList.remove('hidden');
+
+        alert("Invalid Donation Amount");
+        document.getElementById('donate-aid').value = '';
     }
 
     else{
@@ -225,7 +237,7 @@ document.getElementById('donate-quota-movement-aid').addEventListener('click', f
             document.getElementById('quota-movement-donation').innerText = totalAidDonationBalance;
             document.getElementById('account-balance').innerText = remainingAccountBalance;
     
-            
+            document.getElementById('donate-aid').value = '';
     
     
     
@@ -234,13 +246,13 @@ document.getElementById('donate-quota-movement-aid').addEventListener('click', f
             quotaDonationHistory.className = 'bg-white border rounded-xl px-6 py-6 space-y-2';
     
             const options = {
-                weekday: 'short', // Tue
-                year: 'numeric',  // 2024
-                month: 'short',   // Sep
-                day: 'numeric',   // 17
-                hour: '2-digit',  // 08
-                minute: '2-digit',// 39
-                second: '2-digit',// 11
+                weekday: 'short', 
+                year: 'numeric',  
+                month: 'short',   
+                day: 'numeric',   
+                hour: '2-digit',  
+                minute: '2-digit',
+                second: '2-digit',
                 
             };
     
@@ -266,9 +278,9 @@ document.getElementById('donate-quota-movement-aid').addEventListener('click', f
         }
         
         else{
-            document.getElementById('donate-aid-error').classList.remove('hidden');
+            alert("Invalid Donation Amount");
             
-    
+            document.getElementById('donate-aid').value = '';
             
     
     

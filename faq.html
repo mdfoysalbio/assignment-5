@@ -9,13 +9,21 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .lexend-uniquifier {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  
+  
+}
+    </style>
 
 </head>
-<body>
+<body class="lexend-uniquifier">
 
-  <div class="sticky">
-    <div id="navColor" class="flex flex-row justify-between px-[8%] pt-7 pb-10 bg-[#f9f7f3]">
-        <button class="btn  text-xl font-semibold bg-[#B4F461]"><a href="index.html">Home</a></button>
+  <div  class="sticky top-0 z-50">
+    <div  class="flex flex-row justify-between px-[8%] pt-4 pb-10 bg-[#f9f7f3]">
+      <a href="index.html"><button class="btn  text-xl font-semibold hover:bg-[#B4F461] bg-[#B4F461]">Home</button></a>
         <div class="hidden lg:block">
             <div class="flex flex-row gap-4  ">
                 <img class="h-11" src="assets/logo.png" alt="">
@@ -29,12 +37,12 @@
     </div>
 </div>
     <!-- question and answer section start here  -->
-  <section class="px-[5%] lg:py-24 py-8  lg:px-[10%] bg-[#E9E9E9]">
+  <section class="px-[8%] lg:py-10 py-8  lg:px-[8%] bg-[#E9E9E9]">
     <div class="flex flex-row">
       <h1 class="font-bold leading-tight text-[#212121] text-[28px] lg:text-[40px]  text-center">Important FAQ </h1>
-    <img class="h-20 w-20 relative -top-3" src="assets/faq.gif" alt="">
+    <img class="h-14 w-14 lg:h-20 lg:w-20 relative -top-3" src="assets/faq.gif" alt="">
     </div>
-    <div class=" space-y-4 mt-8 lg:mt-14">
+    <div class=" space-y-4 mt-5 lg:mt-7">
 
       <div id="faq-1" class="cursor-pointer collapse collapse-arrow bg-base-200">
         <input type="checkbox" name="my-accordion-2"  />
@@ -79,5 +87,6 @@
  <!-- question and answer section end here  -->
 
  <script src="js/faq.js"></script>
+
 </body>
 </html>
