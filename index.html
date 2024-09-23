@@ -22,10 +22,12 @@
 <header id="navbar" class="sticky top-0 z-50 ">
     <div class="sticky">
         <div id="navColor" class="flex flex-row justify-between px-[8%] pt-7 pb-10 bg-[#f9f7f3]">
-            <button class="btn  text-xl font-semibold bg-[#B4F461]">Blog</button>
-            <div class="flex flex-row gap-4 ">
-                <img class="h-11" src="assets/logo.png" alt="">
-                <p class="text-xl font-semibold flex items-center ">Donate Bangladesh</p>
+            <button class="btn  text-xl font-semibold bg-[#B4F461]"><a href="faq.html">Blog</a></button>
+            <div class="hidden lg:block">
+                <div class="flex flex-row gap-4  ">
+                    <img class="h-11" src="assets/logo.png" alt="">
+                    <p class="text-xl font-semibold flex items-center  ">Donate Bangladesh</p>
+                </div>
             </div>
             <div class="flex flex-row gap-3 ">
                 <img class="h-8" src="assets/coin.png" alt="">
@@ -34,8 +36,8 @@
         </div>
     
         <div class="text-center space-x-3 mt-6 ">
-            <button class="btn  text-xl font-semibold bg-[#B4F461]">Donation</button>
-            <button class="btn  text-xl font-semibold bg-white ">History</button>
+            <button id="donation-btn" class="btn  text-xl font-semibold bg-[#B4F461]">Donation</button>
+            <button id="history-btn" class="btn  text-xl font-semibold bg-white ">History</button>
         </div>
     </div>
 </header>
@@ -46,23 +48,45 @@
 <!-- main part start here  -->
 
 <main>
+
+    <div id="all-section">
+
+        
     <!-- section 1 start here  -->
      <section class="px-[8%] mt-9">
-        <div class="flex flex-row justify-between gap-8 border rounded-xl px-6 py-6">
+        <div class="flex flex-col lg:flex-row justify-between gap-8 border rounded-xl px-6 py-6">
             <div class="h-auto w-full">
                 <img class="h-full w-full" src="assets/noakhali.png" alt="">
             </div>
-            <div class="space-y-4">
+            <div class="space-y-4 relative">
                 <button class="btn flex flex-row">
                     <img src="assets/coin.png" alt="">
-                    <p><span id="balance">0</span> BDT</p>
+                    <p><span id="noakhali-donation">0</span> BDT</p>
                 </button>
                 <h2 class="font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
                 <p class="text-base	font-light	"> The recent floods in Noakhali have caused significant damage to<br class="hidden lg:block"> homes  infrastructure. Your donation will help provide essential<br class="hidden lg:block"> supplies and  to those affected by this disaster. Every contribution,<br class="hidden lg:block"> big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                <input type="text" placeholder="Write Donation Amount " class="placeholder:text-base placeholder:font-light px-3 py-2 w-full rounded-lg	border"><br>
-                <button class="btn  text-xl font-semibold bg-[#B4F461] text-xl	font-semibold w-full">Donate Now</button>
+                <input id="donate-noakhali-flood" type="text" placeholder="Write Donation Amount " class="placeholder:text-base placeholder:font-light px-3 py-2 w-full rounded-lg	border"><br>
+                <p id="noakhali-donate-error" class="hidden text-red-500 text-xs mt-1 ">
+                    ⚠️ Invalid Number!</p>
+                  
+                <button id="donate-noakhali"  class="btn  text-xl font-semibold bg-[#B4F461] text-xl	font-semibold w-full">Donate Now</button>
 
+                 
+                
             </div>
+
+            <!-- popup section start here -->
+            <div class="flex justify-center items-center">
+                <div id="noakhali-popup-section" class="hidden text-center space-y-2 border rounded-2xl py-4 w-auto px-7 lg:w-96 bg-white fixed top-36    lg:top-28 lg:left-[35%] z-50">
+                    <h1 class="text-2xl font-bold">Congrates!</h1>
+                    <img class="mx-auto" src="assets/coin.png" alt="">
+                    <p class="text-sm font-normal">You Have Donated For Humankind</p>
+                    <h2 class="text-lg font-semibold">Successfully</h2>
+                    <button id="noakhali-popup-btn" class="btn text-xs font-semibold bg-[#B4F461]">Close Confirmation</button>
+    
+                </div>
+            </div>
+            <!-- popup section end here  -->
         </div>
      </section>
 
@@ -71,21 +95,38 @@
 
      <!-- section 2 start here  -->
      <section class="px-[8%] mt-9">
-        <div class="flex flex-row justify-between gap-8 border rounded-xl px-6 py-6">
+        <div class="flex flex-col lg:flex-row justify-between gap-8 border rounded-xl px-6 py-6">
             <div class="h-auto w-full">
                 <img class="h-full w-full" src="assets/feni.png" alt="">
             </div>
-            <div class="space-y-4">
+            <div class="space-y-4 relative">
                 <button class="btn flex flex-row">
                     <img src="assets/coin.png" alt="">
-                    <p><span id="balance">600</span> BDT</p>
+                    <p><span id="feni-donation">600</span> BDT</p>
                 </button>
                 <h2 class="font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
                 <p class="text-base	font-light	"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation<br class="hidden lg:block"> will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together we<br class="hidden lg:block"> can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real<br class="hidden lg:block"> difference. Please consider donating today to assist those in urgent need.</p>
-                <input type="text" placeholder="Write Donation Amount " class="placeholder:text-base placeholder:font-light px-3 py-2 w-full rounded-lg	border"><br>
-                <button class="btn  text-xl font-semibold bg-[#B4F461] text-xl	font-semibold w-full">Donate Now</button>
+                <input id="donate-feni-flood" type="text" placeholder="Write Donation Amount " class="placeholder:text-base placeholder:font-light px-3 py-2 w-full rounded-lg	border"><br>
+                <p id="feni-donate-error" class="hidden text-red-500 text-xs mt-1 ">
+                    ⚠️ Invalid Number!
+                  </p>
+                <button id="donate-feni" class="btn  text-xl font-semibold bg-[#B4F461] text-xl	font-semibold w-full">Donate Now</button>
+
+                
 
             </div>
+            <!-- popup section start here -->
+            <div class="flex justify-center items-center">
+                <div id="feni-popup-section" class="hidden text-center space-y-2 border rounded-2xl py-4 w-auto px-7 lg:w-96 bg-white fixed top-36    lg:top-28 lg:left-[35%] z-50">
+                    <h1 class="text-2xl font-bold">Congrates!</h1>
+                    <img class="mx-auto" src="assets/coin.png" alt="">
+                    <p class="text-sm font-normal">You Have Donated For Humankind</p>
+                    <h2 class="text-lg font-semibold">Successfully</h2>
+                    <button id="feni-popup-btn" class="btn text-xs font-semibold bg-[#B4F461]">Close Confirmation</button>
+    
+                </div>
+            </div>
+            <!-- popup section end here  -->
         </div>
      </section>
 
@@ -93,31 +134,60 @@
 
       <!-- section 3 start here  -->
       <section class="px-[8%] mt-9 mb-20">
-        <div class="flex flex-row justify-between gap-8 border rounded-xl px-6 py-6">
+        <div class="flex flex-col lg:flex-row justify-between gap-8 border rounded-xl px-6 py-6">
             <div class="h-auto w-full">
                 <img class="h-full w-full" src="assets/quota-protest.png" alt="">
             </div>
-            <div class="space-y-4">
+            <div class="space-y-4 relative">
                 <button class="btn flex flex-row">
                     <img src="assets/coin.png" alt="">
-                    <p><span id="balance">2400</span> BDT</p>
+                    <p><span id="quota-movement-donation">2400</span> BDT</p>
                 </button>
                 <h2 class="font-bold text-xl">Aid for Injured in the Quota Movement</h2>
                 <p class="text-base	font-light	"> The recent Quota movement has resulted in numerous injuries and<br class="hidden lg:block"> significant hardship for many individuals. Your support is crucial in<br class="hidden lg:block"> providing medical assistance, rehabilitation, and necessary supplies<br class="hidden lg:block"> to those affected. By contributing, you help ensure that injured<br class="hidden lg:block"> individuals receive the care and support they need during this<br class="hidden lg:block"> challenging time. Every donation plays a vital role in alleviating<br class="hidden lg:block"> their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
-                <input type="text" placeholder="Write Donation Amount " class="placeholder:text-base placeholder:font-light px-3 py-2 w-full rounded-lg	border"><br>
-                <button class="btn  text-xl font-semibold bg-[#B4F461] text-xl	font-semibold w-full">Donate Now</button>
+                <input id="donate-aid" type="text" placeholder="Write Donation Amount " class="placeholder:text-base placeholder:font-light px-3 py-2 w-full rounded-lg	border"><br>
+                <p id="donate-aid-error" class="text-red-500 text-xs mt-1 hidden">
+                    ⚠️ Invalid Number!
+                  </p>
+                <button id="donate-quota-movement-aid"  class="btn  text-xl font-semibold bg-[#B4F461] text-xl	font-semibold w-full">Donate Now</button>
 
+                
             </div>
+            <!-- popup section start here -->
+            <div class="flex justify-center items-center">
+                <div id="quota-popup-section" class="hidden text-center space-y-2 border rounded-2xl py-4 w-auto px-7 lg:w-96 bg-white fixed top-36    lg:top-28 lg:left-[35%] z-50">
+                    <h1 class="text-2xl font-bold">Congrates!</h1>
+                    <img class="mx-auto" src="assets/coin.png" alt="">
+                    <p class="text-sm font-normal">You Have Donated For Humankind</p>
+                    <h2 class="text-lg font-semibold">Successfully</h2>
+                    <button id="quota-popup-btn" class="btn text-xs font-semibold bg-[#B4F461]">Close Confirmation</button>
+    
+                </div>
+            </div>
+            <!-- popup section end here  -->
         </div>
      </section>
        <!-- section 3 end here  -->
 
+    </div>
+
 
        <!-- History section start here  -->
-        <div class=" hidden mx-[8%]"></div>
+        <div id="history-section" class="  mx-[8%] space-y-4 hidden mt-7 mb-7">
+            
+        </div>
         <!-- History section end here  -->
 </main>
+<footer id="footer" class="lg:h-28 h-16 w-full bg-[#f9f7f3] items-end ">
+   
+</footer>
+
+
+
     
   <script src="js/glasseffect.js"></script>
+  <script src="js/getElementById.js"></script>
+  <script src="js/index.js"></script>
 </body>
+
 </html>

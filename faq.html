@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/a77d73ac34.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+  <div class="sticky">
+    <div id="navColor" class="flex flex-row justify-between px-[8%] pt-7 pb-10 bg-[#f9f7f3]">
+        <button class="btn  text-xl font-semibold bg-[#B4F461]"><a href="index.html">Home</a></button>
+        <div class="hidden lg:block">
+            <div class="flex flex-row gap-4  ">
+                <img class="h-11" src="assets/logo.png" alt="">
+                <p class="text-xl font-semibold flex items-center  ">Donate Bangladesh</p>
+            </div>
+        </div>
+        <div class="flex flex-row gap-3 ">
+            <img class="h-8" src="assets/coin.png" alt="">
+            <p class="text-xl font-semibold flex items-start"><span id="account-balance">5500</span>&nbsp;BDT</p>
+        </div>
+    </div>
+</div>
+    <!-- question and answer section start here  -->
+  <section class="px-[5%] lg:py-24 py-8  lg:px-[10%] bg-[#E9E9E9]">
+    <div class="flex flex-row">
+      <h1 class="font-bold leading-tight text-[#212121] text-[28px] lg:text-[40px]  text-center">Important FAQ </h1>
+    <img class="h-20 w-20 relative -top-3" src="assets/faq.gif" alt="">
+    </div>
+    <div class=" space-y-4 mt-8 lg:mt-14">
+
+      <div id="faq-1" class="cursor-pointer collapse collapse-arrow bg-base-200">
+        <input type="checkbox" name="my-accordion-2"  />
+        <div class="collapse-title text-xl font-medium">What is the Documnet Object Model (DOM) ?</div>
+        <div class="collapse-content">
+          <p > <i class="fa-solid fa-arrow-right mr-3"></i>DOM is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects that can be accessed and manipulated by programming languages like JavaScript. The DOM provides a way to interact with the structure, style, and content of a web page.</p>
+        </div>
+      </div>
+
+      <div id="faq-2" class="cursor-pointer collapse collapse-arrow bg-base-200">
+        <input type="checkbox" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you select an element from the DOM ?</div>
+        <div class="collapse-content">
+          <p > <i class="fa-solid fa-arrow-right mr-3"></i>To select an element from the DOM in JavaScript, I use a variety of methods depending on what criteria i am selecting. such as i use id , class, tag name, element by name or css selector to select any element from the DOM in JavaScript .</p>
+        </div>
+      </div>
+      <div id="faq-3" class="cursor-pointer collapse collapse-arrow bg-base-200">
+        <input type="checkbox" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM , and why is it useful?</div>
+        <div class="collapse-content">
+          <p > <i class="fa-solid fa-arrow-right mr-3"></i>Event delegation is a technique in JavaScript that involves attaching a single event listener to a parent element to manage events on multiple child elements, even if those child elements are added dynamically. Instead of adding individual event listeners to each child element, you delegate the responsibility of handling events to a common ancestor (parent) element. It is useful for better perfomance, easier maintance and handles dynamically added elements. </p>
+        </div>
+      </div>
+      <div id="faq-4" class="cursor-pointer collapse collapse-arrow bg-base-200">
+        <input type="checkbox" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM ?</div>
+        <div class="collapse-content">
+          <p > <i class="fa-solid fa-arrow-right mr-3"></i>To manipulate an element's attributes in the DOM, i can use methods like getAttribute(), setAttribute(), and removeAttribute(). For styles, use the style property to change inline CSS or the classList methods to add, remove, or toggle CSS classes. These methods allow me to dynamically modify the appearance and behavior of elements on the page.</p>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+
+
+
+
+    </div>
+  </section>
+ <!-- question and answer section end here  -->
+
+ <script src="js/faq.js"></script>
+</body>
+</html>
